@@ -1,0 +1,9 @@
+package com.formation;
+
+public class Personne {
+	
+	String prenom;
+	String nom;
+	int age;
+
+}
