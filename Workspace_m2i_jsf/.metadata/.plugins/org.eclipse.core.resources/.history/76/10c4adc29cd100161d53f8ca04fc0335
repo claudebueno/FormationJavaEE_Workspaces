@@ -1,0 +1,10 @@
+package com.formation.bean;
+
+public class PingPong {
+	
+	int valeurGauche;
+	int valeurDroite;
+	
+	
+
+}

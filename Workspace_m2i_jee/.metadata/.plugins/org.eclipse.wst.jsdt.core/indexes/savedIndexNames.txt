@@ -1,0 +1,9 @@
+INDEX VERSION 1.3+C:\FormationJavaEE\FormationJavaEE_Workspaces\Workspace_m2i_jee\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4123078797.index
+512883324.index
+3435717006.index
+1971631392.index
+2858462999.index
+3477076990.index
+862880531.index
+1771490026.index
