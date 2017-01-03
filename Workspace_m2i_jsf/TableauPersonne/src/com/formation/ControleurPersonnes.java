@@ -26,14 +26,23 @@ public class ControleurPersonnes {
 
 	public void ajouter() {
 
+		for (int i = 0; i < 10; i++) {
+			personnes.add(new Personne("Leon" + i, "Durand" + i, 18 + i));
+
+		}
+
+	}
+
+	public void supprimer(Personne p) {
+		//personnes.remove(p);
 	}
 
 	public void remplir() {
-		
+
 		for (int i = 0; i < 10; i++) {
-			
-			personnes.add (new Personne("Leon" + i, "Durand" + i, 18 + i));
-			
+
+			personnes.add(new Personne("Leon" + i, "Durand" + i, 18 + i));
+
 		}
 
 	}

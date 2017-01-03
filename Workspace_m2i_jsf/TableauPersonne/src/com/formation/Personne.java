@@ -25,6 +25,7 @@ public class Personne {
 	public void setAge(int age) {
 		this.age = age;
 	}
+	
 	public Personne(String prenom, String nom, int age) {
 		super();
 		this.prenom = prenom;

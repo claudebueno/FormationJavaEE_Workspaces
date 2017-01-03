@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:head>
+	<title>Tableau de personnes</title>
+</h:head>
+
+<h:body>
+	<table>
+		<tr>
+			<th>Prenom</th>
+			<th>Nom</th>
+			<th>Age</th>
+
+		</tr>
+		<tbody>
+			<ui:repeat var="p" value="#{controleur.personnes}" varStatus="status">
+				<tr>
+					<td>#{p.prenom}</td>
+					<td>#{p.nom}</td>
+					<td>#{p.age}</td>
+				</tr>
+
+			</ui:repeat>
+		</tbody>
+	</table>
+
+</h:body>
+</html>
