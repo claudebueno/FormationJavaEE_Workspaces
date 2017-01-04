@@ -1,0 +1,49 @@
+package com.formation;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class PersonnesDAO {
+
+	  public void ouvrirConnexion() {
+	   Connection conn = null;
+	   Statement stmt = null;
+	   final String JDBC_DRIVER = "com.mysql.jdbc.Driver";  
+	   final String DB_URL = "jdbc:mysql://localhost/formationdb";
+	   
+	   
+	   
+	   try{
+	      Class.forName("com.mysql.jdbc.Driver");
+	      System.out.println("Connecting to database...");
+	      conn = DriverManager.getConnection(DB_URL,"root","");
+
+	      stmt = conn.createStatement();
+	      String sql;
+	      
+	      
+	      
+	      
+	      sql = "select * from personnes";
+	      ResultSet rs = stmt.executeQuery(sql);
+
+	      //STEP 5: Extract data from result set
+	      while(rs.next()){
+	         //Retrieve by column name
+	    	  	int idpersonne = rs.getInt("idpersonne");
+		        String nom = rs.getString("nom");
+		        String prenom = rs.getString("prenom");
+		        int age = rs.getInt("age");
+		        personnes.add
+	      }
+	      rs.close();
+	      stmt.close();
+	      conn.close();
+	   }			     
+	   catch(Exception se){
+	         se.printStackTrace();
+	      }
+	   }
+	}
