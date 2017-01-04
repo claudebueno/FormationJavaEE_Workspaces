@@ -1,12 +1,8 @@
 INDEX VERSION 1.3+C:\FormationJavaEE\FormationJavaEE_Workspaces\Workspace_m2i_jsf\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-4166915522.index
-2661837180.index
-3903661093.index
-886657403.index
-3808974357.index
-2486675587.index
-3938811461.index
 1383668000.index
+4166915522.index
+3781973591.index
+3938811461.index
 169478518.index
-797071762.index
+3808974357.index
 226578725.index
