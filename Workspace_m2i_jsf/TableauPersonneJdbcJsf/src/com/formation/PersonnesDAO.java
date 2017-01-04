@@ -63,4 +63,59 @@ public class PersonnesDAO {
 		}
 		return personnes;
 	}
+	
+	public List insererPersonnes() throws SQLException {
+		ArrayList<Personne> personnes = new ArrayList<Personne>();
+		sql = "INSERT * from personnes";
+		rs = stmt.executeQuery(sql);
+
+		// INSERT data from data
+		
+		
+		
+		return null;
+		//connection.autocomit
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public List supprimerPersonnes() throws SQLException {
+		ArrayList<Personne> personnes = new ArrayList<Personne>();
+		sql = "select * from personnes";
+		rs = stmt.executeQuery(sql);
+
+		// STEP 5: Extract data from result set
+		
+		
+		
+		return null;
+		
+	}
+	
+	
 }

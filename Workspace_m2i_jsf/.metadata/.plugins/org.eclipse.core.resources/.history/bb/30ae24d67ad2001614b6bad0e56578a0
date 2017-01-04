@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Tableau de personnes BDD</title>
+
+</h:head>
+
+<h:body>
+
+<p:dataTable var="p" value="#{controleur.personnes}" varStatus="status">
+	<p:column>
+		<f:facet name="header">ID</f:facet>#{p.idpersonne}
+	</p:column>
+	<p:column>
+		<f:facet name="header">Nom</f:facet>#{p.nom}
+	</p:column>
+	<p:column>
+		<f:facet name="header">Prenom</f:facet>#{p.prenom}
+	</p:column>
+	<p:column>
+		<f:facet name="header">Age</f:facet>#{p.age}
+	</p:column>
+	<p:column>
+		<f:facet name="header"></f:facet><p:commandButton type="submit" value="Suppr" action="#{controleur.supprimer(p)}" styleClass="ui-priority-primary"></p:commandButton>
+	</p:column>
+</p:dataTable>
+
+<br></br>
+	<h:form>
+		
+		<p:fieldset id="default" legend="Ajout d'une personne" style="margin-bottom:20px">	
+			<table>
+				<tr>
+					<td><h:messages showDetail="true" /></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="ID : " /></td>
+					<td><p:inputText value="#{p.idpersonne}" /></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Nom : " /></td>
+					<td><p:inputText value="#{p.nom}" /></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Prénom : " /></td>
+					<td><p:inputText value="#{p.prenom}" /></td>
+				</tr>
+				<tr>
+					<td><h:outputText value="Age : " /></td>
+					<td><p:inputText value="#{p.age}">
+						</p:inputText></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><p:commandButton value="Ajouter" action="#{controleur.inserer()}" /></td>
+							
+					
+							
+				</tr>
+			</table>
+		</p:fieldset>
+	</h:form>
+
+
+
+
+
+
+
+</h:body>
+</html>

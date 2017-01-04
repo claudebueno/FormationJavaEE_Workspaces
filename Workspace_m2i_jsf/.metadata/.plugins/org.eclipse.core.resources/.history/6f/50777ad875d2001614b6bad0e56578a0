@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<title>Tableau de personnes BDD</title>
+
+</h:head>
+
+<h:body>
+
+	<h:form>
+		<table>
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>Nom</th>
+					<th>Prénom</th>
+					<th>Age</th>
+					<td></td>
+				</tr>
+			</thead>
+			<tbody>
+				<ui:repeat var="p" value="#{controleur.personnes}"
+					varStatus="status">
+					<tr>
+						<td>#{p.idpersonne}</td>
+						<td>#{p.nom}</td>
+						<td>#{p.prenom}</td>
+						<td>#{p.age}</td>
+						<td><h:commandButton type="submit" value="Suppr" action="#{controleur.supprimer(p)}">
+							</h:commandButton></td>
+					</tr>
+
+				</ui:repeat>
+			</tbody>
+		</table>
+	</h:form>
+<br></br>
+<br></br>
+	<h:form>
+	<fieldset id="default" style="margin-bottom:20px">
+     <legend>Ajout d'une personne</legend>
+		<table>
+			<tr>
+				<td><h:messages showDetail="true" /></td>
+			</tr>
+			<tr>
+				<td><h:outputText value="ID : " /></td>
+				<td><h:inputText value="#{p.idpersonne}" /></td>
+			</tr>
+			<tr>
+				<td><h:outputText value="Nom : " /></td>
+				<td><h:inputText value="#{p.nom}" /></td>
+			</tr>
+			<tr>
+				<td><h:outputText value="Prénom : " /></td>
+				<td><h:inputText value="#{p.prenom}" /></td>
+			</tr>
+			<tr>
+				<td><h:outputText value="Age : " /></td>
+				<td><h:inputText value="#{p.age}">
+					</h:inputText></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><h:commandButton value="Ajouter" action="#{controleur.inserer()}" /></td>
+			</tr>
+		</table>
+		</fieldset> 
+	</h:form>
+
+
+
+
+
+
+
+</h:body>
+</html>

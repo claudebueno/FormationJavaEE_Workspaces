@@ -24,7 +24,7 @@ public class ControleurPersonnes {
 		this.personnes = personnes;
 	}
 
-	// constructeur utilisant DAO
+	// constructeur utilisant DAO = OK
 	public ControleurPersonnes() throws SQLException {
 		personne = new PersonnesDAO();
 		personne.ouvrirConnexion();
@@ -32,15 +32,33 @@ public class ControleurPersonnes {
 		remplir();
 	}
 
-	public void ajouter() {
-
-/*		for (int i = 0; i < 10; i++) {
-			personnes.add(new Personne("Leon" + i, "Durand" + i, 18 + i));
-		}
-*/
+	// inserer une personne en utilisant DAO
+	public void inserer() throws SQLException {
+		personne = new PersonnesDAO();
+		personne.ouvrirConnexion();
+		personnes = personne.insererPersonnes();
+		remplir();
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
-	public void supprimer(Personne p) {
+	public void supprimer(Personne p) throws SQLException {
+		personne = new PersonnesDAO();
+		personne.ouvrirConnexion();
+		personnes = personne.supprimerPersonnes();
 		//personnes.remove(p);
 	}
 

@@ -1,0 +1,51 @@
+package com.formation;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@ManagedBean(name = "controleur", eager = true)
+@SessionScoped
+public class ControleurPersonnes {
+
+	private List<Personne> personnes = new ArrayList<Personne>();
+	public PersonnesDAO personne;
+
+
+	// lire personne
+	public List<Personne> getPersonnes() {
+		return personnes;
+	}
+
+	public void setPersonnes(List<Personne> personnes) {
+		this.personnes = personnes;
+	}
+
+	// constructeur utilisant DAO
+	public ControleurPersonnes() throws SQLException {
+		personne = new PersonnesDAO();
+		personne.ouvrirConnexion();
+		personnes = personne.lirePersonnes();
+		remplir();
+	}
+
+	public void inserer() {
+		
+	}
+
+	public void supprimer(Personne p) {
+		//personnes.remove(p);
+	}
+
+	public void remplir() {
+
+/*		for (int i = 0; i < 10; i++) {
+			personnes.add(new Personne("Leon" + i, "Durand" + i, 18 + i));
+		}*/
+
+	}
+
+}
