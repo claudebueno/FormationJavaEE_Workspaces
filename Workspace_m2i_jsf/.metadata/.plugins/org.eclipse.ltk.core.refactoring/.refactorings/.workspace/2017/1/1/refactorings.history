@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;TableauPersonneBddJsf&apos; to &apos;ProjetJdbJsf&apos;" description="Rename resource &apos;TableauPersonneBddJsf&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/TableauPersonneBddJsf" name="ProjetJdbJsf" stamp="1483526297942" updateReferences="true"/>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;TableauPersonneBddJsf&apos; to &apos;ProjetJdbJsf&apos;" description="Rename resource &apos;TableauPersonneBddJsf&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/TableauPersonneBddJsf" name="ProjetJdbJsf" stamp="1483526297942" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;ProjetJdbJsf&apos; to &apos;TableauPersonneJdbcJsf&apos;" description="Rename resource &apos;ProjetJdbJsf&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/ProjetJdbJsf" name="TableauPersonneJdbcJsf" stamp="1483526716596" updateReferences="true"/>
 </session>

@@ -8,3 +8,7 @@
 0:0:0:0:0:0:0:1 - - [04/Jan/2017:11:41:40 +0100] "GET /ProjetJdbJsf/ HTTP/1.1" 200 1180
 0:0:0:0:0:0:0:1 - - [04/Jan/2017:11:41:43 +0100] "POST /ProjetJdbJsf/faces/index.xhtml;jsessionid=E69414F43A605D50FF97D9DA591149ED HTTP/1.1" 200 1136
 0:0:0:0:0:0:0:1 - - [04/Jan/2017:11:41:44 +0100] "POST /ProjetJdbJsf/faces/index.xhtml HTTP/1.1" 500 4127
+127.0.0.1 - - [04/Jan/2017:11:45:45 +0100] "GET / HTTP/1.1" 404 962
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:11:45:46 +0100] "GET /TableauPersonneJdbcJsf/ HTTP/1.1" 404 1008
+127.0.0.1 - - [04/Jan/2017:11:46:35 +0100] "GET / HTTP/1.1" 404 962
+0:0:0:0:0:0:0:1 - - [04/Jan/2017:11:46:36 +0100] "GET /TableauPersonneJdbcJsf/ HTTP/1.1" 200 1190
