@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;com.formation.ConnexionDB&apos; to &apos;PersonnesDB&apos;&#x0D;&#x0A;- Original project: &apos;ProjetJdbcJsf&apos;&#x0D;&#x0A;- Original element: &apos;com.formation.ConnexionDB&apos;&#x0D;&#x0A;- Renamed element: &apos;com.formation.PersonnesDB&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ConnexionDB&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.formation{ConnexionDB.java[ConnexionDB" matchStrategy="1" name="PersonnesDB" qualified="false" references="true" similarDeclarations="false" stamp="1483519488061" textual="false" version="1.0"/>
-</session>
