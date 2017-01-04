@@ -1,0 +1,15 @@
+package com.formation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@ManagedBean(name = "playground", eager = true)
+@SessionScoped
+public class ControleurPlayground {
+	
+	private List<Case> positions = new ArrayList<Case>();
+
+}

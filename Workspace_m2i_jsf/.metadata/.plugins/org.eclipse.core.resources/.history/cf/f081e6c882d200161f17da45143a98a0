@@ -1,0 +1,9 @@
+package com.formation;
+
+public class Case {
+	
+	int nbCase;
+	int position;
+	
+
+}

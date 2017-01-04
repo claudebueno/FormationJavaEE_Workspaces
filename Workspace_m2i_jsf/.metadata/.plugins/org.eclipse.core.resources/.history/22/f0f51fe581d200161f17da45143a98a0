@@ -1,0 +1,23 @@
+package com.formation;
+
+public class Navire {
+	
+	int position;
+	int longueur;
+	
+	public int getPosition() {
+		return position;
+	}
+	public void setPosition(int position) {
+		this.position = position;
+	}
+	public int getLongueur() {
+		return longueur;
+	}
+	public void setLongueur(int longueur) {
+		this.longueur = longueur;
+	}
+	
+	
+
+}

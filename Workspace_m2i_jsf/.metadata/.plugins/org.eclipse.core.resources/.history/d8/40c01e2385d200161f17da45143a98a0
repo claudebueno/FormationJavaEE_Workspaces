@@ -1,0 +1,23 @@
+package com.formation;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+@ManagedBean(name = "contoleur", eager = true)
+@SessionScoped
+public class ControleurPlayground {
+	
+	private List<Integer> lescases = new ArrayList<Integer>();
+	
+	public ControleurPlayground() {
+		
+		for (int i = 0; i < 20; i++) {
+			
+			lescases.add(i);
+		}
+	}
+
+}

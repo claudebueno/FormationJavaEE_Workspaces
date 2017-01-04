@@ -1,0 +1,22 @@
+package com.formation;
+
+public class Case {
+	
+	int nbCase;
+	int position;
+	
+	public int getNbCase() {
+		return nbCase;
+	}
+	public void setNbCase(int nbCase) {
+		this.nbCase = nbCase;
+	}
+	public int getPosition() {
+		return position;
+	}
+	public void setPosition(int position) {
+		this.position = position;
+	}
+	
+
+}

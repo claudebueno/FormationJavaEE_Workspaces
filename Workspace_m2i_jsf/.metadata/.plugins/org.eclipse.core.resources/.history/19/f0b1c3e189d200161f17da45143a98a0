@@ -1,0 +1,46 @@
+package com.formation;
+
+public class Navire {
+	
+	String name = "Navire1";
+	int position;
+	int longueur;
+	boolean touche = false;
+	boolean coule = false;
+	
+	public Navire(int max) {
+		
+		Random = new Random();
+		position = nextInt(max);
+		longueur = nextInt(5);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	public int getPosition() {
+		return position;
+	}
+	public void setPosition(int position) {
+		position = (int) Math.random() * (0 - 20);
+	}
+	
+	public int getLongueur() {
+		return longueur;
+	}
+	public void setLongueur(int longueur) {
+		longueur = (int) Math.random() * (0-5);
+		return;
+	}
+	
+	public Navire(int position, int longueur) {
+		super();
+		this.position = position;
+		this.longueur = longueur;
+	}
+	
+}

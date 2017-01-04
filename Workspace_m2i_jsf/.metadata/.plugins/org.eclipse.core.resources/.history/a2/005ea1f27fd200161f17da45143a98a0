@@ -1,0 +1,23 @@
+package com.formation;
+
+public class Position {
+	
+	int position;
+	int largeur;
+	
+	public int getPosition() {
+		return position;
+	}
+	public void setPosition(int position) {
+		this.position = position;
+	}
+	public int getLargeur() {
+		return largeur;
+	}
+	public void setLargeur(int largeur) {
+		this.largeur = largeur;
+	}
+	
+	
+
+}
