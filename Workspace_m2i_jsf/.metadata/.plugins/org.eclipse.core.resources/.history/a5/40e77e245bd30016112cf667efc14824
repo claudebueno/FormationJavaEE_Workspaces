@@ -24,6 +24,7 @@ public class PersonnesDAO {
 		} catch (Exception se) {
 			se.printStackTrace();
 		}
+
 	}
 
 	public void fermerConnexion() {
@@ -46,12 +47,11 @@ public class PersonnesDAO {
 	}
 
 	public List lirePersonnes() throws SQLException {
-
 		ArrayList<Personne> personnes = new ArrayList<Personne>();
 		sql = "select * from personnes";
 		rs = stmt.executeQuery(sql);
 
-		// Extract data from result set
+		// STEP 5: Extract data from result set
 		while (rs.next()) {
 			// Retrieve by column name
 			int idpersonne = rs.getInt("idpersonne");
@@ -59,23 +59,33 @@ public class PersonnesDAO {
 			String prenom = rs.getString("prenom");
 			int age = rs.getInt("age");
 			personnes.add(new Personne(idpersonne, nom, prenom, age));
+			// System.out.println(String.format("%s %s %d", nom, prenom, age));
 		}
 		return personnes;
 	}
-
+	
 	public List insererPersonnes() throws SQLException {
+/*		ArrayList<Personne> personnes = new ArrayList<Personne>();
+		sql = "INSERT * from personnes";
+		rs = stmt.executeQuery(sql);
 
+		// INSERT data from data
+		
+		
+		*/
 		return null;
+		//connection.autocomit
 	}
 
+	
 	public List supprimerPersonnes() throws SQLException {
-
 		ArrayList<Personne> personnes = new ArrayList<Personne>();
 		sql = "select * from personnes";
 		rs = stmt.executeQuery(sql);
 
 		return null;
-
+		
 	}
-
+	
+	
 }

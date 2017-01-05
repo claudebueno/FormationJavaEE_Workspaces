@@ -46,7 +46,6 @@ public class PersonnesDAO {
 	}
 
 	public List lirePersonnes() throws SQLException {
-
 		ArrayList<Personne> personnes = new ArrayList<Personne>();
 		sql = "select * from personnes";
 		rs = stmt.executeQuery(sql);
@@ -62,20 +61,21 @@ public class PersonnesDAO {
 		}
 		return personnes;
 	}
-
+	
 	public List insererPersonnes() throws SQLException {
 
 		return null;
 	}
 
+	
 	public List supprimerPersonnes() throws SQLException {
-
 		ArrayList<Personne> personnes = new ArrayList<Personne>();
 		sql = "select * from personnes";
 		rs = stmt.executeQuery(sql);
 
 		return null;
-
+		
 	}
-
+	
+	
 }
