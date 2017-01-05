@@ -44,7 +44,7 @@ public class ControleurPersonnes {
 /*		personne = new PersonnesDAO();
 		personne.ouvrirConnexion();
 		personnes = personne.supprimerPersonnes();*/
-		personnes.remove(p);
+		//personnes.remove(p);
 	}
 
 	public void remplir() {

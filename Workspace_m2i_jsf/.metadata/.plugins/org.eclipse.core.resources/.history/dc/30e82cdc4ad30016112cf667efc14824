@@ -65,14 +65,14 @@ public class PersonnesDAO {
 	}
 	
 	public List insererPersonnes() throws SQLException {
-/*		ArrayList<Personne> personnes = new ArrayList<Personne>();
+		ArrayList<Personne> personnes = new ArrayList<Personne>();
 		sql = "INSERT * from personnes";
 		rs = stmt.executeQuery(sql);
 
 		// INSERT data from data
 		
 		
-		*/
+		
 		return null;
 		//connection.autocomit
 	}

@@ -29,9 +29,7 @@
 		<f:facet name="header">Age</f:facet>#{p.age}
 	</p:column>
 	<p:column>
-		<f:facet name="header"></f:facet><p:commandButton type="submit" value="Suppr" 
-		action="#{controleur.supprimer(p)}" icon="ui-icon-check">
-		</p:commandButton>
+		<f:facet name="header"></f:facet><p:commandButton type="submit" value="Suppr" action="#{controleur.supprimer(p)}" icon="ui-icon-star"></p:commandButton>
 	</p:column>
 </p:dataTable>
 
@@ -63,11 +61,19 @@
 				<tr>
 					<td></td>
 					<td><p:commandButton value="Ajouter" action="#{controleur.inserer()}" /></td>
-						
+							
+					
+							
 				</tr>
 			</table>
 		</p:fieldset>
 	</h:form>
+
+
+
+
+
+
 
 </h:body>
 </html>
