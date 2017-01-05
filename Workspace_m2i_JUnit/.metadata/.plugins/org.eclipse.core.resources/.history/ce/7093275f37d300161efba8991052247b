@@ -1,0 +1,26 @@
+package com.formation.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import com.formation.metier.Calculator;
+
+public class TestOpMethode {
+	
+	@Test    // Indique que c'est un classe de test
+	public void testOK() {
+		Calculator c = new Calculator();
+		// assertTrue(c.uneMethodeTest(1, 1) == 2);
+		assertFalse(c.uneMethodeTest(1, 2) == 2);
+	}
+
+	@Test
+	public void testKO() {
+		Calculator c = new Calculator();
+		// assertTrue(c.uneMethodeTest(1, 1) == 5);
+		assertFalse(c.uneMethodeTest(1, 1) == 2);
+
+	}
+
+}

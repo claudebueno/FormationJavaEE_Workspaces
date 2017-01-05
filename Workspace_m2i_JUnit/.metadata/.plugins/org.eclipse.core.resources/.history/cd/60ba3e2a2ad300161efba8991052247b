@@ -1,0 +1,28 @@
+package com.formation.metier;
+
+public class Calculator {
+
+	/* public static int main(String[] args) { */
+
+	private static int nbTentatives = 0;
+	int a;
+	int b;
+
+	public int add() {
+		return a + b;
+	}
+
+	public int sub() {
+		return a - b;
+	}
+
+	public int mul() {
+		return a + b;
+	}
+
+	public int div() {
+		return a + b;
+	}
+}
+
+/* } */
