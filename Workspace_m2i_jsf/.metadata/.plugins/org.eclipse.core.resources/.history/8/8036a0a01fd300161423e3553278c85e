@@ -34,16 +34,31 @@ public class ControleurPersonnes {
 
 	// inserer une personne en utilisant DAO
 	public void inserer() throws SQLException {
-/*		personne = new PersonnesDAO();
+		personne = new PersonnesDAO();
 		personne.ouvrirConnexion();
 		personnes = personne.insererPersonnes();
-		remplir();*/
+		remplir();
 	}
 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
 	public void supprimer(Personne p) throws SQLException {
-/*		personne = new PersonnesDAO();
+		personne = new PersonnesDAO();
 		personne.ouvrirConnexion();
-		personnes = personne.supprimerPersonnes();*/
+		personnes = personne.supprimerPersonnes();
 		//personnes.remove(p);
 	}
 
