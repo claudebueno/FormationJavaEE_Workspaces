@@ -1,0 +1,46 @@
+package com.formation.dao;
+
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class ConnecteurDB {
+
+	public static String nomConnexion = "postgres";/// du contexte 5433
+	public static String motDePasse = "root";// end du contexte
+	public static String nom_schema = "tp_java_bdd";
+
+	public static Connection getConnexion() {
+		try {
+			// chargement de la classe par son nom
+
+			String protocolePostgres = "jdbc:postgresql:";
+			// Adresse IP de l'hôte de la base et port
+			String ip = "localhost"; // dépend du contexte
+			String port = "5433"; // port MySQL par défaut
+			String conString = protocolePostgres + "//" + ip + ":" + port + "/" + nom_schema;
+
+			// Connexion
+			Connection con = DriverManager.getConnection(conString, nomConnexion, motDePasse);
+
+			return con;
+
+		} catch (Exception e) {
+			System.out.println("problÃ¨me de connexion a la bdd");
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public static void selectAll(Connection con) throws SQLException {
+		String sql = "select * from " + "tp1" + "." + "Utilisateurs";
+		Statement smt = (Statement) con.createStatement();
+		ResultSet rs = (ResultSet) smt.executeQuery(sql);
+		while (rs.next()) {
+			System.out.println(rs.getString("nom"));
+		}
+	}
+
+}

@@ -1,0 +1,13 @@
+package com.formation.metier;
+
+import com.formation.dao.ConnexionDB;
+
+public class Lanceur {
+
+	public static void main(String[] args) {
+
+		ConnexionDB connexionDB = new ConnexionDB();
+		
+	}
+
+}

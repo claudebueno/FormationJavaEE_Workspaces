@@ -1,0 +1,21 @@
+package com.formation.metier;
+
+public class Utilisateur {
+	
+	int id;
+	String nom;
+	String prenom;
+	String dateNaissance;
+	
+	
+	public Utilisateur(int id, String nom, String prenom, String dateNaissance) {
+		super();
+		this.id = id;
+		this.nom = nom;
+		this.prenom = prenom;
+		this.date_naissance = dateNaissance;
+	}
+	
+	
+
+}

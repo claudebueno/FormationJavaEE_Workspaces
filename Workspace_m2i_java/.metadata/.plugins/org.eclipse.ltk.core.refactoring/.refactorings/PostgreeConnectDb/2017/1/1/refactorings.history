@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.formation.dao.ConnexionDB&apos; to &apos;ConnecteurDB&apos;&#x0D;&#x0A;- Original project: &apos;PostgreeConnectDb&apos;&#x0D;&#x0A;- Original element: &apos;com.formation.dao.ConnexionDB&apos;&#x0D;&#x0A;- Renamed element: &apos;com.formation.dao.ConnecteurDB&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;ConnexionDB&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.formation.dao{ConnexionDB.java[ConnexionDB" matchStrategy="1" name="ConnecteurDB" qualified="false" references="true" similarDeclarations="false" stamp="1483696226892" textual="false" version="1.0"/>
+</session>

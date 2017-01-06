@@ -1,0 +1,10 @@
+package com.formation.metier;
+
+public class Utilisateur {
+	
+	Int id;
+	String nom;
+	String prenom;
+	String date_naissance;
+
+}
