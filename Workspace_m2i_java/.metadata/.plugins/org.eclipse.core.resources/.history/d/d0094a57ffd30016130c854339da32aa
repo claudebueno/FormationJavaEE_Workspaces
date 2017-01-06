@@ -1,0 +1,73 @@
+package com.formation.dao;
+
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Connection;
+import java.sql.Statement;
+
+public class ConnecteurDB {
+
+	public static String nomConnexion = "postgres";				// du contexte 5433
+	public static String motDePasse = "root";					// end du contexte
+	public static String nom_schema = "tp1";
+
+	public static Connection getConnexion() {
+		try {
+			// chargement de la classe par son nom
+
+			String protocolePostgres = "jdbc:postgresql:";
+			// Adresse IP de l'hôte de la base et port
+			String ip = "localhost"; // dépend du contexte
+			String port = "5432"; // port MySQL par défaut
+			String conString = protocolePostgres + "//" + ip + ":" + port + "/" + nom_schema;
+
+			// Connexion
+			Connection con = DriverManager.getConnection(conString, nomConnexion, motDePasse);
+
+			return con;
+
+		} catch (Exception e) {
+			System.out.println("probleme de connexion a la bdd");
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+	public static void selectAll(Connection con) throws SQLException {
+		String sql = "select * from " + "tp1" + "." + "Utilisateurs";
+		Statement smt = (Statement) con.createStatement();
+		ResultSet rs = (ResultSet) smt.executeQuery(sql);
+		while (rs.next()) {
+			System.out.println(rs.getString("nom"));
+		}
+	}
+	
+	public static void inserer(int identifiant, String nom, String prenom, String date_naissance) throws SQLException {
+		Connection con = getConnexion();
+		String insertOrder = creerUneRequeteInsertionPostgres(identifiant, nom, prenom, date_naissance);
+		Statement smt = (Statement) con.createStatement();
+		System.out.println("la requete que j'execute : " + insertOrder);
+		smt.execute(insertOrder);
+	}
+
+	private static String creerUneRequeteInsertionPostgres(int id, String nom, String prenom, String date_naissance) {
+			String strSQL;
+			
+			strSQL="INSERT INTO tp1.utilisateurs (id,nom,prenom,date_naissance) ";
+			strSQL+="VALUES ("+id+",'"+nom+"','"+prenom+"','"+date_naissance+"');";
+			return strSQL;
+		}
+		
+		
+/*		String sql = "INSERT INTO" + "tp1" + "." + "Utilisateurs " + "(identifiant, nom, prenom, date_naissance)" + 
+				"VALUES (1, 'Saint-Didier-des-Bois', 'Armand', '1989/12/12'),"
+				+ "(2, 'Hebert','Marigny-le-Châtel', 1988/01/15),"
+				+ "(3, 'Ribeiro', 'Marielle', 1978/05/15),"
+				+ "(4, 'Hilaire', 'Etienne', 1958/06/14);";*/
+		
+		return null;
+	}
+
+}

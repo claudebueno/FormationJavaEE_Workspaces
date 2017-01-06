@@ -1,0 +1,14 @@
+package com.formation.metier;
+
+public class GestionSportifLanceur {
+
+	public static void main(String[] args) {
+		
+		//MainJFrame fen = new MainJFrame();
+    	JFrameSportif fen = new JFrameSportif();  
+    	fen.setTitle("Enregistrement Sportif");
+    	fen.setVisible(true);
+
+	}
+
+}

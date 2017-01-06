@@ -1,0 +1,44 @@
+package com.formation.metier;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import com.formation.dao.ConnecteurDB;
+
+public class Lanceur {
+
+	public static void main(String[] args) {
+
+		int k = 3;
+		Connection con = ConnecteurDB.getConnexion();
+		try {
+			ConnecteurDB.selectAll(con);
+			for (k = 3; k < 12; k++) {
+			}
+			ConnecteurDB.selectAll(con);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		private static String creerUneRequeteInsertion(int id, String nom, String prenom, String date_naissance) {
+			String strSQL;
+			
+			strSQL="INSERT INTO tp1.utilisateurs (id,nom,prenom,date_naissance) ";
+			strSQL+="VALUES ("+id+",'"+nom+"','"+prenom+"','"+date_naissance+"');";
+			return strSQL;
+		}
+		
+		
+		
+	}
+	
+}
+
+
+
+
+/*		String sql = "INSERT INTO" + "tp1" + "." + "Utilisateurs " + "(identifiant, nom, prenom, date_naissance)" + 
+		"VALUES (1, 'Saint-Didier-des-Bois', 'Armand', '1989/12/12'),"
+		+ "(2, 'Hebert','Marigny-le-Châtel', 1988/01/15),"
+		+ "(3, 'Ribeiro', 'Marielle', 1978/05/15),"
+		+ "(4, 'Hilaire', 'Etienne', 1958/06/14);";*/

@@ -7,7 +7,7 @@ import com.formation.dao.ConnecteurDB;
 
 public class Lanceur {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws SQLException {
 
 		int k = 3;
 		Connection con = ConnecteurDB.getConnexion();
@@ -17,8 +17,13 @@ public class Lanceur {
 			}
 			ConnecteurDB.selectAll(con);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		// ConnecteurDB.inserer(2, "Durand", "Maxime", "1887/10/05");
+		
+		// ConnecteurDB.supprimer(1, "Hebert", "Marielle", "2000/12/12");
+
 	}
+
 }
